@@ -5,11 +5,14 @@
   var socket = io();
   var canvas = document.getElementsByClassName('whiteboard')[0];
   var colors = document.getElementsByClassName('color');
+  var eraser = document.getElementsByClassName('color')[5];
   var context = canvas.getContext('2d');
 
   var current = {
     color: 'black'
   };
+
+  
   var drawing = false;
 
   canvas.addEventListener('mousedown', onMouseDown, false);
@@ -38,7 +41,7 @@
     context.moveTo(x0, y0);
     context.lineTo(x1, y1);
     context.strokeStyle = color;
-    context.lineWidth = 2;
+    context.lineWidth = 5;
     context.stroke();
     context.closePath();
 

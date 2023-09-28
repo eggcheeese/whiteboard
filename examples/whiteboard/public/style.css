@@ -29,12 +29,14 @@ html, body {
 
 .colors {
   position: fixed;
+  margin: 2;
 }
 
 .color {
   display: inline-block;
   height: 48px;
   width: 48px;
+  border-radius: 100%;
 }
 
 .color.black { background-color: black; }
@@ -42,3 +44,5 @@ html, body {
 .color.green { background-color: green; }
 .color.blue { background-color: blue; }
 .color.yellow { background-color: yellow; }
+.color.white { background-color: white; }
+.eraser {border: 1px solid gray; display: flex; border-radius: 0;}
